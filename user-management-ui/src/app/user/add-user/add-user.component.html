@@ -1,0 +1,31 @@
+
+<form ngForm #addUserForm class="form">
+  <mat-form-field>
+    <input matInput placeholder="ID Number" name="idNum" [(ngModel)]="nationalCode">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="First Name" name="fname" [(ngModel)]="firstName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Last Name" name="lname" [(ngModel)]="lastName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Your Birth Date" [(ngModel)]="birthdate"
+           name="birthdate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input type="email" matInput placeholder="Email" name="email" [(ngModel)]="email">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="tel" matInput placeholder="Phone Number" name="phone" [(ngModel)]="phoneNumber">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Address" name="address" [(ngModel)]="address"></textarea>
+  </mat-form-field>
+  <button mat-stroked-button
+          color="primary"
+          (click)="saveUser()"> Add User
+  </button>
+</form>

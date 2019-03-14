@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+
+.edit {
+  background-color: #03A9F4;
+  color: #fff;
+}
+
+.btn {
+  margin: 1em;
+}
