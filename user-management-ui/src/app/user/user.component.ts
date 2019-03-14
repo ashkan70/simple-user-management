@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
   users: User[] = [];
 
   displayedColumns: string[] = ['id', 'nationalCode', 'firstName', 'lastName',
-    'birthdate', 'email', 'phoneNumber', 'address', 'delete', 'edit'];
+    'birthdate', 'email', 'phoneNumber', 'address', 'edit'];
 
   constructor(private userService: UserService,
               private router: Router) {
@@ -30,10 +30,5 @@ export class UserComponent implements OnInit {
         console.log(theUsers);
         this.users = theUsers;
       });
-  }
-
-  deleteUser(id) {
-    this.userService.deleteUser(id)
-      .subscribe(res => this.router.navigate(['/home']));
   }
 }

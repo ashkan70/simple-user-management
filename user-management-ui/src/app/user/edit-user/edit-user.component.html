@@ -39,8 +39,14 @@
               name="address"
               [(ngModel)]="user.address"></textarea>
   </mat-form-field>
-  <button mat-stroked-button
-          color="primary"
-          (click)="updateUser()">Save User
-  </button>
+  <div class="btn">
+    <button mat-raised-button
+            color="primary"
+            (click)="updateUser()">Save User
+    </button>
+    <button mat-flat-button
+            color="warn"
+            (click)="deleteUser()">Delete User
+    </button>
+  </div>
 </form>

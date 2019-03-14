@@ -31,4 +31,9 @@ export class EditUserComponent implements OnInit {
     this.userService.updateUser(this.user)
       .subscribe(res => this.router.navigate(['/home']));
   }
+
+  deleteUser() {
+    this.userService.deleteUser(this.user.id)
+      .subscribe(res => this.router.navigate(['/home']));
+  }
 }
